@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Fluxo de Usuário - Comprar Curso Online</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+    }
+    .flow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .step {
+      background: #ffffff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      border: 2px solid #888;
+      min-width: 250px;
+      text-align: center;
+      font-weight: bold;
+      color: #555;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .arrow {
+      font-size: 20px;
+      color: #888;
+      font-weight: bold;
+    }
+    .decision {
+      background: #fff3e0;
+      border: 2px dashed #ff9800;
+      color: #e65100;
+    }
+    .branch {
+      display: flex;
+      gap: 40px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align: center; color: #333;">📌 Fluxo de Usuário: João (Comprar Curso Online)</h1>
+
+  <h2 style="text-align: center; color: #666;">Fluxo Linear (Caminho Ideal)</h2>
+  <div class="flow">
+    <div class="step">Início: João acessa o site</div>
+    <div class="arrow">↓</div>
+    <div class="step">Etapa 1: Busca por curso</div>
+    <div class="arrow">↓</div>
+    <div class="step">Etapa 2: Seleciona curso</div>
+    <div class="arrow">↓</div>
+    <div class="step">Etapa 3: Adiciona ao carrinho</div>
+    <div class="arrow">↓</div>
+    <div class="step">Fim: Finaliza compra</div>
+  </div>
+
+  <hr style="margin: 40px 0; border: 1px solid #ddd;">
+
+  <h2 style="text-align: center; color: #666;">Fluxo com Decisão (Login/Cadastro no Checkout)</h2>
+  <div class="flow">
+    <div class="step">Acessa o Carrinho</div>
+    <div class="arrow">↓</div>
+    <div class="step">Clica em "Finalizar Compra"</div>
+    <div class="arrow">↓</div>
+    <div class="step decision">Decisão: Possui cadastro?</div>
+    <div class="branch">
+      <div class="flow">
+        <div class="step" style="border-color: #4CAF50;">Caminho A: Sim → Login</div>
+        <div class="arrow">↓</div>
+        <div class="step">Insere e-mail e senha</div>
+        <div class="arrow">↓</div>
+        <div class="step">Fim A: Confirmação da Compra</div>
+      </div>
+      <div class="flow">
+        <div class="step" style="border-color: #F44336;">Caminho B: Não → Cadastro</div>
+        <div class="arrow">↓</div>
+        <div class="step">Cria conta (Opção: Login com Google)</div>
+        <div class="arrow">↓</div>
+        <div class="step">Fim B: Confirmação da Compra</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
